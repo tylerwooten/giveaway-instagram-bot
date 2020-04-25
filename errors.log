@@ -1,0 +1,94 @@
+WARNING:fake_useragent:Error occurred during loading data. Trying to use cache server https://fake-useragent.herokuapp.com/browsers/0.1.11
+Traceback (most recent call last):
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 1318, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line
+  936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 724, in create_connection
+    raise err
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\fake_useragent\utils.py", line 67, in get
+    context=context,
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 526, in open
+    response = self._open(req, data)
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 544, in _open
+    '_open', req)
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 504, in _call_chain
+    result = func(*args)
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\Tyler Wooten\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error timed out>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\fake_useragent\utils.py", line 166, in load
+    verify_ssl=verify_ssl,
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\fake_useragent\utils.py", line 122, in get_browser_versions
+    verify_ssl=verify_ssl,
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\fake_useragent\utils.py", line 84, in get
+    raise FakeUserAgentError('Maximum amount of retries reached')
+fake_useragent.errors.FakeUserAgentError: Maximum amount of retries reached
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instabot_py\instabot.py", line 730, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instaloader\structures.py", line 422, in from_id
+    str(profile_id) + ").")
+instaloader.exceptions.ProfileNotExistsException: No profile found, the user may have blocked you (ID: 2001037898832910720).
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instabot_py\instabot.py", line 960, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instabot_py\sql_updates.py", line 128, in insert_username
+    + "')"
+TypeError: must be str, not bool
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instabot_py\instabot.py", line 730, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instaloader\structures.py", line 422, in from_id
+    str(profile_id) + ").")
+instaloader.exceptions.ProfileNotExistsException: No profile found, the user may have blocked you (ID: 2001037898832910720).
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instabot_py\instabot.py", line 960, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instabot_py\sql_updates.py", line 128, in insert_username
+    + "')"
+TypeError: must be str, not bool
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instabot_py\instabot.py", line 730, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instaloader\structures.py", line 422, in from_id
+    str(profile_id) + ").")
+instaloader.exceptions.ProfileNotExistsException: No profile found, the user may have blocked you (ID: 2001037898832910720).
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instabot_py\instabot.py", line 960, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\Tyler Wooten\PycharmProjects\first\venv\lib\site-packages\instabot_py\sql_updates.py", line 128, in insert_username
+    + "')"
+TypeError: must be str, not bool
